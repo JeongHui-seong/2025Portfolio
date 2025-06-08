@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>정희성 - Developer Portfolio</title>
+</head>
+
+<body>
+  <div id="app">
+    <nav id="nav">
+      <ul>
+        <li>About</li>
+        <li>Project</li>
+        <li>Feedback</li>
+      </ul>
+    </nav>
+    <div class="theme_toggle">
+      🌙
+    </div>
+    <div class="container">
+      <section id="section1">
+        <h2>“사용자 중심 사고, 팀워크 중심의 협업, 기술 중심의 완성도”</h2>
+        <h1>안녕하세요, 개발자 <span>정희성</span>입니다.</h1>
+        <div class="tech_box">
+          <div class="top_wrap">
+            <ul>
+              <li class="red_bg"></li>
+              <li class="blue_bg"></li>
+              <li class="green_bg"></li>
+            </ul>
+          </div>
+          <div class="bottom_wrap">
+            <p>
+              <span class="red_font">const</span> <span class="blue_font">developer</span> = { <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;name : <span class="green_font">“정희성”</span>, <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Frontend : [<span class="green_font">“HTML”</span>, <span
+                class="green_font">“CSS”</span>, <span class="green_font">“JavaScript”</span>], <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Backend : <span class="green_font">“Spring Boot”</span>, <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Data Analysis : <span class="green_font">“Python”</span>, <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Database : [<span class="green_font">“Oracle”</span>, <span
+                class="green_font">“MongoDB”</span>, <span class="green_font">“PostgreSQL”</span>, <span
+                class="green_font">“MySQL”</span>], <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Design Tools : [<span class="green_font">“Photoshop”</span>, <span
+                class="green_font">“Illustrator”</span>, <span class="green_font">“Figma”</span>], <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;DevOps & Tools : [<span class="green_font">“Github”</span>, <span
+                class="green_font">“Docker”</span>, <span class="green_font">“Linux”</span>], <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Big Data : [<span class="green_font">“Hadoop”</span>, <span
+                class="green_font">“Kafka”</span>], <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;BaaS : [<span class="green_font">“Firebase”</span>, <span
+                class="green_font">“Supabase”</span>] <br>
+              };
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="section2">
+        <h1>Projects</h1>
+        <ul class="project_box">
+          <li class="project_list">
+            <div class="top_wrap">📊 데이터 분석 프로젝트</div>
+            <div class="content_wrap">
+              <h2>경남 지역의 문화 자원 불균형 문제와 대응 사례</h2>
+              <p>2025년 경상남도 빅데이터 분석 공모전에 참가한 프로젝트로, 경남 지역의 인구 감소와 지역 문화 자원의 분포 및 활용 현황 간의 연관성을 분석하고, 그 결과를 바탕으로 데이터 기반
+                문제점과 해결 방안을 도출한 프로젝트입니다.</p>
+            </div>
+            <ul class="tag_wrap">
+              <li class="tag_list">Python</li>
+              <li class="tag_list">Pandas</li>
+              <li class="tag_list">geopandas</li>
+              <li class="tag_list">folium</li>
+              <li class="tag_list">Matplotlib</li>
+              <li class="tag_list">WSL2 + Ubuntu</li>
+            </ul>
+            <div class="bottom_wrap">
+              공모전 PDF 다운로드
+            </div>
+          </li>
+          <li class="project_list">
+            <div class="top_wrap">🎯 개인 프로젝트</div>
+            <div class="content_wrap">
+              <h2>소통 커뮤니티 사이트 “Bread”</h2>
+              <p>SPA 원리를 이해하고자 직접 라우팅을 구현하여 소통 커뮤니티 사이트를 개발하였습니다. BaaS로 Supabase를 활용해 많은 기능들을 구현했습니다. 라이브러리 없이 순수
+                자바스크립트로 구성함으로써 프론트엔드의 구조적 이해와 백엔드 연동 경험을 함께 쌓을 수 있었습니다.</p>
+            </div>
+            <ul class="tag_wrap">
+              <li class="tag_list">JavaScript</li>
+              <li class="tag_list">SPA</li>
+              <li class="tag_list">Supabase</li>
+              <li class="tag_list">CSR</li>
+              <li class="tag_list">CRUD</li>
+              <li class="tag_list">Real-time DB</li>
+            </ul>
+            <div class="bottom_wrap">
+              <a href="https://github.com/JeongHui-seong/bread" target="_blank">Github</a>
+              <a href="https://bread-eight.vercel.app/" target="_blank">사이트 보러가기</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="section3">
+        <h1>Feedback</h1>
+        <p>더 나은 개발자로 성장하기 위해 여러분들의 의견을 듣고 싶습니다.<br>
+          부족한 점이나 개선이 필요한 부분이 있다면 자유롭게 남겨주세요. 감사합니다! 🙏</p>
+        <div class="feedback_box">
+          <input type="text" placeholder="닉네임을 입력해주세요" id="inp_name" name="name">
+          <input type="text" placeholder="내용을 입력해주세요" id="inp_content" name="content">
+          <button class="submit">댓글 남기기</button>
+          <ul class="comment_box">
+            <li class="comment_list">
+              <p class="name">닉네임</p>
+              <p class="content">내용</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer id="footer">
+      <p>2025 정희성 포트폴리오</p>
+      <a href="https://github.com/JeongHui-seong" target="_blank">Github</a>
+    </footer>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
