@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>정희성 - Developer Portfolio</title>
 </head>
 
 <body>
   <div id="app">
     <nav id="nav">
-      <ul>
-        <li>About</li>
-        <li>Project</li>
-        <li>Feedback</li>
+      <ul class="nav_ul">
+        <li class="nav_about nav_active">About</li>
+        <li class="nav_project">Project</li>
+        <li class="nav_feedback">Feedback</li>
       </ul>
     </nav>
     <div class="theme_toggle">
@@ -22,9 +22,9 @@
     </div>
     <div class="container">
       <section id="section1">
-        <h2>“사용자 중심 사고, 팀워크 중심의 협업, 기술 중심의 완성도”</h2>
-        <h1>안녕하세요, 개발자 <span>정희성</span>입니다.</h1>
-        <div class="tech_box">
+        <h2 class="fade">“사용자 중심 사고, 팀워크 중심의 협업, 기술 중심의 완성도”</h2>
+        <h1 class="fade">안녕하세요, <br class="dis_none"> 개발자 <span>정희성</span>입니다.</h1>
+        <div class="tech_box fade">
           <div class="top_wrap">
             <ul>
               <li class="red_bg"></li>
@@ -57,9 +57,9 @@
         </div>
       </section>
       <section id="section2">
-        <h1>Projects</h1>
+        <h1 class="fade">Projects</h1>
         <ul class="project_box">
-          <li class="project_list">
+          <li class="project_list fade">
             <div class="top_wrap">📊 데이터 분석 프로젝트</div>
             <div class="content_wrap">
               <h2>경남 지역의 문화 자원 불균형 문제와 대응 사례</h2>
@@ -75,10 +75,10 @@
               <li class="tag_list">WSL2 + Ubuntu</li>
             </ul>
             <div class="bottom_wrap">
-              공모전 PDF 다운로드
+              <a href="정희성_분석보고서.pdf" download>분석 PDF 다운로드</a>
             </div>
           </li>
-          <li class="project_list">
+          <li class="project_list fade">
             <div class="top_wrap">🎯 개인 프로젝트</div>
             <div class="content_wrap">
               <h2>소통 커뮤니티 사이트 “Bread”</h2>
@@ -101,13 +101,15 @@
         </ul>
       </section>
       <section id="section3">
-        <h1>Feedback</h1>
-        <p>더 나은 개발자로 성장하기 위해 여러분들의 의견을 듣고 싶습니다.<br>
+        <h1 class="fade">Feedback</h1>
+        <p class="fade">더 나은 개발자로 성장하기 위해 여러분들의 의견을 듣고 싶습니다.<br>
           부족한 점이나 개선이 필요한 부분이 있다면 자유롭게 남겨주세요. 감사합니다! 🙏</p>
-        <div class="feedback_box">
+        <div class="feedback_box fade">
           <input type="text" placeholder="닉네임을 입력해주세요" id="inp_name" name="name">
           <input type="text" placeholder="내용을 입력해주세요" id="inp_content" name="content">
-          <button class="submit">댓글 남기기</button>
+          <div class="btn_box">
+            <button class="submit">댓글 남기기</button>
+          </div>
           <ul class="comment_box">
             <li class="comment_list">
               <p class="name">닉네임</p>
@@ -122,7 +124,7 @@
       <a href="https://github.com/JeongHui-seong" target="_blank">Github</a>
     </footer>
   </div>
-  <script src="/js/app.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
