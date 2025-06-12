@@ -166,4 +166,5 @@ const channels = supabase.channel('comments-insert-channel')
   )
   .subscribe();
 
-
+// 엔터치면 댓글 남길건지 확인
+// shift + 엔터 다음 줄
