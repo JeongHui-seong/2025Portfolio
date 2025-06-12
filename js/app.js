@@ -81,29 +81,31 @@ const commName = document.getElementById("inp_name");
 const commContent = document.getElementById("inp_content");
 
 const addComment = () => {
-  const nameValue = commName.value;
-  const contentValue = commContent.value;
-
-  const commentData = {
-    nickname: nameValue,
-    comments: contentValue
-  };
-
-  fetch("https://yyyteojoqgajfcbkmhdu.supabase.co/rest/v1/comments", {
-    method: "POST",
-    headers: {
-      "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5eXRlb2pvcWdhamZjYmttaGR1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2NDExODgsImV4cCI6MjA2NTIxNzE4OH0.w-e8t4YmIgzUO-TjuICPDfA5DqJlX8vvboQkv-Bllc8",
-      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5eXRlb2pvcWdhamZjYmttaGR1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2NDExODgsImV4cCI6MjA2NTIxNzE4OH0.w-e8t4YmIgzUO-TjuICPDfA5DqJlX8vvboQkv-Bllc8",
-      "Content-Type": "application/json",
-      "Prefer": "return=representation"
-    },
-    body: JSON.stringify(commentData)
-  }).then(() => console.log("데이터 삽입 성공")).catch(err => console.log(err))
+  let nameValue = commName.value;
+  let contentValue = commContent.value;
+  if (nameValue.trim() !== '' && contentValue.trim() !== ''){
+    const commentData = {
+      nickname: nameValue,
+      comments: contentValue
+    };
+  
+    fetch("https://yyyteojoqgajfcbkmhdu.supabase.co/rest/v1/comments", {
+      method: "POST",
+      headers: {
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5eXRlb2pvcWdhamZjYmttaGR1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2NDExODgsImV4cCI6MjA2NTIxNzE4OH0.w-e8t4YmIgzUO-TjuICPDfA5DqJlX8vvboQkv-Bllc8",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5eXRlb2pvcWdhamZjYmttaGR1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2NDExODgsImV4cCI6MjA2NTIxNzE4OH0.w-e8t4YmIgzUO-TjuICPDfA5DqJlX8vvboQkv-Bllc8",
+        "Content-Type": "application/json",
+        "Prefer": "return=representation"
+      },
+      body: JSON.stringify(commentData)
+    }).then(() => {console.log("데이터 삽입 성공"); commName.value = ''; commContent.value = '';}).catch(err => console.log(err))
+  } else{
+    alert("닉네임과 내용을 입력해주세요.")
+  }
 }
+
 btnCommSubmit.addEventListener("click", () => {
   addComment();
-  commName.value = '';
-  commContent.value = '';
 });
 
 // 댓글 불러오기
@@ -166,5 +168,8 @@ const channels = supabase.channel('comments-insert-channel')
   )
   .subscribe();
 
-// 엔터치면 댓글 남길건지 확인
-// shift + 엔터 다음 줄
+// 엔터치면 댓글 남기기
+document.addEventListener("keydown",(e)=>{
+  if(e.key === "Enter"){
+    addComment();
+  }});
