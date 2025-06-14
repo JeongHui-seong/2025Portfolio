@@ -162,7 +162,7 @@ const channels = supabase.channel('comments-insert-channel')
     'postgres_changes',
     { event: 'INSERT', schema: 'public', table: 'comments' },
     (payload) => {
-      const newComment = { nickname: payload.new.comments, comments: payload.new.comments }
+      const newComment = { nickname: payload.new.nickname, comments: payload.new.comments }
       renderNewComment(newComment)
     }
   )
