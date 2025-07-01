@@ -195,10 +195,12 @@ body {
   padding: var(--mt-20);
   border-bottom: 1px solid var(--border);
   background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #section1 .tech_box .top_wrap ul {
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -221,6 +223,10 @@ body {
 
 .green_bg {
   background-color: var(--green);
+}
+
+.link_github{
+  color: var(--point);
 }
 
 #section1 .tech_box .bottom_wrap {
