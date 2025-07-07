@@ -31,6 +31,7 @@
   --mt-5: 5px;
   --mt-10: 10px;
   --mt-12: 12px;
+  --mt-16: 16px;
 }
 
 [data-theme="dark"] {
@@ -60,6 +61,7 @@
   --mt-5: 5px;
   --mt-10: 10px;
   --mt-12: 12px;
+  --mt-16: 16px;
 }
 
 li {
@@ -179,7 +181,7 @@ body {
   color: var(--point);
 }
 
-#section1 .tech_box {
+.tech_box {
   max-width: 800px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
@@ -189,7 +191,7 @@ body {
   font-size: var(--size-16);
 }
 
-#section1 .tech_box .top_wrap {
+.tech_box .top_wrap {
   width: 100%;
   height: 60px;
   padding: var(--mt-20);
@@ -200,14 +202,14 @@ body {
   justify-content: space-between;
 }
 
-#section1 .tech_box .top_wrap ul {
+.tech_box .top_wrap ul {
   height: 100%;
   display: flex;
   align-items: center;
   gap: var(--mt-8);
 }
 
-#section1 .tech_box .top_wrap li {
+.tech_box .top_wrap li {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -435,6 +437,60 @@ body {
   display: none;
 }
 
+.modal_hidden{
+  display: none;
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+}
+
+.modal_close{
+  width: 20px;
+  height: 20px;
+}
+
+.modal .tech_wrap{
+  padding: var(--mt-24);
+}
+
+.modal .tech_box .bottom_wrap{
+  padding: var(--mt-40) var(--mt-100);
+  background-color: var(--bg-primary);
+  max-height: 540px;
+  overflow-y: scroll;
+}
+
+.modal .tech_box .bottom_wrap .content{
+  margin-bottom: var(--mt-40);
+}
+
+.modal .tech_box .bottom_wrap .content .page_info{
+  font-family: 'bold';
+  font-size: var(--size-16);
+}
+
+.modal .tech_box .bottom_wrap .content .page_content{
+  font-family: 'Regular';
+  font-size: var(--size-14);
+  margin-top: var(--mt-8);
+}
+
+.modal .tech_box .bottom_wrap .content .page_img{
+  margin-top: var(--mt-16);
+}
+
+.modal .tech_box .bottom_wrap .content .page_img img{
+  width: 100%;
+}
+
 @media (max-width : 960px) {
   :root {
     --size-56: 40px;
@@ -462,6 +518,15 @@ body {
 }
 
 @media (max-width : 600px) {
+  #nav {
+    padding: var(--mt-12) var(--mt-24);
+  }
+
+  .theme_toggle{
+    top: var(--mt-12);
+    right: var(--mt-12);
+  }
+
   .dis_none {
     display: block;
   }
@@ -476,5 +541,13 @@ body {
 
   [data-theme="dark"] {
     --size-24: 14px;
+  }
+
+  .modal .tech_box{
+    margin-top: 0;
+  }
+
+  .modal .tech_box .bottom_wrap{
+    padding: var(--mt-40) var(--mt-24);
   }
 }

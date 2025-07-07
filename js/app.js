@@ -173,3 +173,31 @@ document.addEventListener("keydown",(e)=>{
   if(e.key === "Enter"){
     addComment();
   }});
+
+// python 프로젝트 모달 열기
+const pythonModal = document.querySelector(".modal");
+const pythonProjectLink = document.querySelector(".python_project_link");
+const modalClose = document.querySelector(".modal_close");
+const techWrap = document.querySelector(".tech_wrap");
+
+const openPythonModal = () => {
+    pythonModal.classList.remove("modal_hidden");
+    document.body.style.overflow = "hidden"; // 모달 열리면 스크롤 막기
+}
+
+pythonProjectLink.addEventListener("click", () => openPythonModal());
+
+// python 프로젝트 모달 닫기
+const closePythonModal = () => {
+    pythonModal.classList.add("modal_hidden");
+    document.body.style.overflow = ""; // 모달 닫히면 스크롤 다시 가능하게
+}
+
+modalClose.addEventListener("click", () => closePythonModal());
+
+// 모달 외부 클릭시 닫기
+pythonModal.addEventListener("click", (e) => {
+  if (e.target === pythonModal || e.target === techWrap) {
+    closePythonModal();
+  }
+});
