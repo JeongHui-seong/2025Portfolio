@@ -1,0 +1,23 @@
+body{
+  font-family: "Regular";
+}
+
+.left-float{
+  position: fixed;
+  top: var(--px-40);
+  right: var(--px-40);
+}
+
+.weather-box{
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--px-12);
+  padding: var(--px-8-12);
+  font-size: var(--font-size-16);
+  border-radius: 100px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
