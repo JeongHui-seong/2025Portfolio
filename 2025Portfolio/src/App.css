@@ -21,3 +21,94 @@ body{
   box-shadow: var(--shadow);
   position: relative;
 }
+
+.title-box{
+  text-align: center;
+  margin-top: 100px;
+  font-family: "bold";
+}
+
+.title-box .subtitle{
+  font-size: 24px;
+}
+
+.title-box .maintitle{
+  font-size: 56px;
+  margin-top: var(--px-20);
+}
+
+.title-box .font-purple{
+  color: var(--primary-color);
+}
+
+.stack-box{
+  margin: 0 auto;
+  margin-top: 120px;
+  max-width: 800px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-16);
+  overflow: hidden;
+}
+
+.header-box{
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
+  height: 60px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.header-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header-wrapper .title{
+  font-size: var(--font-size-16);
+}
+
+.header-wrapper a{
+  color: var(--primary-color);
+  font-family: 'regular';
+}
+
+.content-wrapper{
+  padding: var(--px-40);
+  line-height: 1.5;
+}
+
+.red-font{
+  color: var(--red-color);
+}
+
+.blue-font{
+  color: var(--blue-color);
+}
+
+.green-font{
+  color: var(--green-color);
+}
+
+.projects-box{
+  margin: 0 auto;
+  margin-top: var(--px-240);
+  max-width: 840px;
+}
+
+.projects-box .title{
+  font-size: var(--px-56);
+  font-family: 'Bold';
+  text-align: center
+}
+
+.project-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--px-40);
+  flex-wrap: nowrap;
+}
