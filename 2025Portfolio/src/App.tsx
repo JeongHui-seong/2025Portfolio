@@ -1,10 +1,11 @@
-import './App.css'
-import WeatherBox from './components/WeatherBox'
-import StackBox from './components/StackBox'
+import './App.css';
+import WeatherBox from './components/WeatherBox';
+import StackBox from './components/StackBox';
+import FetchProjects from './lib/FetchProjects';
 
 function App() {
   return (
-    <div>
+    <div className='wrap'>
       <div className="left-float">
         <WeatherBox />
       </div>
@@ -15,7 +16,9 @@ function App() {
       <StackBox />
       <div className='projects-box'>
         <h2 className='title'>Projects</h2>
-        <div className="project-list"></div>
+        <div className="project-list">
+          <FetchProjects />
+        </div>
       </div>
     </div>
   )

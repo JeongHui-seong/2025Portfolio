@@ -9,6 +9,23 @@ a{
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+  font-size: var( --font-size-16);
+}
+
+button{
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: 'Bold';
+  cursor: pointer;
+}
+
+ul, li{
+  list-style: none;
+}
+
 :root{
   --font-color: #222222;
   --primary-color: #764BA2;
@@ -19,15 +36,25 @@ a{
   --green-color: #27AE60;
   --blue-color: #3498DB;
   --red-color: #E74C3C;
+  --gray2-font: #666666;
   --px-40: 40px;
+  --px-60: 60px;
   --px-12: 12px;
   --px-8-12: 8px 12px;
+  --px-5-10: 5px 10px;
+  --px-8: 8px;
   --px-20: 20px;
+  --px-120: 120px;
   --px-240: 240px;
-  --px-56: 56px;
+  --font-size-56: 56px;
+  --font-size-24: 24px;
   --font-size-16: 16px;
+  --font-size-17: 17px;
+  --font-size-20: 20px;
+  --font-size-14: 14px;
   --border-radius-16: 16px;
   --shadow: 0 2px 30px 0 rgba(0, 27, 55, 0.1);
+  --bg-opacity: 255, 255, 255, 0.5
 }
 
 h1,h2,h3,h4,h5,h6,p,span{
