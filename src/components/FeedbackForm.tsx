@@ -12,7 +12,11 @@ export default function FeedbackForm() {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (iconboxRef.current && !iconboxRef.current.contains(event.target as Node)) {
+      if (
+        iconboxRef.current &&
+        (iconboxRef.current as HTMLElement).contains &&
+        !(iconboxRef.current as HTMLElement).contains(event.target as Node)
+      ) {
         setOpenSelectIcon(false);
       }
     }
