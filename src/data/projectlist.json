@@ -1,0 +1,149 @@
+[
+    {
+    "id": 1,
+    "subtitle": "🚀 내일 배움 일경험 프로젝트",
+    "thumbnail": "/img/hooaah/hooaah_thumbnail.png",
+    "title": "요트 관리 플랫폼",
+    "date": "2025. 09. 29 ~ 2025. 11. 30",
+    "tags": ["Flutter", "Spring Boot", "MySQL", "FCM", "AI Chating", "Kakao Deep Link", "Figma", "Slack", "Vibe Coding"],
+    "link": "https://github.com/HooAah-Yacht/frontend",
+    "linkType": "external",
+    "dialog": {
+      "platform": "mobile",
+      "title": "요트 관리 플랫폼",
+      "date": "2025. 09. 29 ~ 2025. 11. 30",
+      "tech": "Flutter, Spring Boot, MySQL, FCM, AI Chating, Kakao Deep Link, Figma, Slack",
+      "part": "Figma를 활용한 UI 설계, Flutter를 활용한 프론트엔드 개발",
+      "description": "요트 소유자를 위한 스마트 관리 솔루션, Flutter 기반 크로스플랫폼 모바일 애플리케이션",
+      "video": "/img/hooaah/hooaah.mp4",
+      "detail": [
+        {
+          "title": "홈 스크린",
+          "img": "/img/hooaah/home.png",
+          "content": "로그인 후 진입하는 홈 화면입니다. 요트가 등록되지 않은 경우에는 등록 안내 문구와 요트 아이콘, 그리고 ‘요트 등록’ 버튼이 표시되며 사용자가 쉽게 등록 과정을 시작할 수 있도록 구성했습니다. 반대로 요트가 등록된 경우에는 여러 대의 요트를 관리할 수 있도록 슬라이드 형태의 리스트 UI를 적용해 직관적으로 요트를 확인하고 선택할 수 있습니다."
+        },
+        {
+          "title": "요트 등록 스크린",
+          "img": "/img/hooaah/add_yacht.png",
+          "content": "요트를 등록할 수 있는 첫번째 스크린이며, 기업에서 요구한 20가지 요트 종류를 미리 등록하여 선택할 수 있게 했고, 요트 별칭을 통해 사용자가 좀 더 요트 구분이 쉽게 구성했습니다. 해당 요트의 커스텀 매뉴얼이나 공식 문서를 등록하게 되면 문서를 분석해 요트 정보를 등록하게 됩니다."
+        },
+        {
+          "title": "요트 등록 스크린",
+          "img": "/img/hooaah/add_yacht_part.png",
+          "content": "요트를 등록할 수 있는 두번째 스크린이며, 요트 등록과 동시에 관리할 부품을 바로 등록할 수 있도록 하였으며, 다른 사용자들은 해당 요트의 부품을 어떤걸 쓰는지 혹은 어떤 부품을 관리해야할지 모르는 초보 관리자를 위한 추천 부품 기능을 구현하였습니다."
+        },
+        {
+          "title": "부품 관리 스크린",
+          "img": "/img/hooaah/manage_part.png",
+          "content": "현재 요트에 등록되어 있는 부품들을 확인할 수 있고, 최근 정비일과 정비 주기를 계산하여 예상 정비일 추출 후 여유가 있으면 초록색, 7일 이내로 남았다면 노란색, 지났다면 빨간색으로 ui차이를 두어 한 눈에 보기 쉽게 구현했습니다."
+        },
+        {
+          "title": "부품 상세 스크린",
+          "img": "/img/hooaah/part_detail.png",
+          "content": "특정 부품에 대한 정보를 상세히 볼 수 있으며, 부품 삭제 및 부품 정보 수정이 가능합니다. 또한 지금까지의 정비 이력 확인이 가능하고, 정비 이력을 추가하여 최근 정비일을 업데이트할 수 있습니다."
+        },
+        {
+          "title": "부품 등록",
+          "img": "/img/hooaah/add_part.png",
+          "content": "요트 등록 시에 부품 등록하는 위젯과 동일한 위젯을 공유하고 있으며, 요트 등록 이후에 추가 부품을 등록하고 싶을 때 언제든지 관리하고 싶은 부품을 등록할 수 있습니다."
+        },
+        {
+          "title": "요트 관리 스크린",
+          "img": "/img/hooaah/manage_yacht.png",
+          "content": "계정에 등록되어 있는 요트들을 선택할 수 있고 요트 추가도 가능하며, 현재 요트 관리를 공유하는 맴버 리스트 확인이 가능하고, 딥링크를 통해 카카오톡으로 맴버를 초대할 수 있는 기능을 구현하였습니다."
+        },
+        {
+          "title": "캘린더 스크린",
+          "img": "/img/hooaah/calendar_before.png",
+          "content": "부품 등록 시 예상 정비일이 자동으로 캘린더에 표시가 되고, 진행 전인 일정은 노란색으로 사용자가 한 눈에 잘 알아볼 수 있게 구현하였습니다."
+        },
+        {
+          "title": "캘린더 스크린",
+          "img": "/img/hooaah/calendar_after.png",
+          "content": "진행 완료된 일정은 초록색으로 사용자가 한 눈에 잘 알아볼 수 있게 구현하였습니다."
+        },
+        {
+          "title": "일정 등록",
+          "img": "/img/hooaah/add_calendar.png",
+          "content": "일정이 진행 전인지 완료되었는지 토글을 통해 선택할 수 있고, 현재 계정에 등록된 요트를 선택해 어떤 요트의 일정인지 등록할 수 있게 했습니다. 기업에서 일정에 대해 구분할 수 있는 포인트가 있으면 좋겠다는 요구가 있어 <세일링, 점검, 정비> 타입을 정해 정비 타입을 선택할 경우 정비할 부품을 선택할 수 있는 Select Box가 밑에 생기게 되고, 정비 타입의 완료 여부에 따라서 정비 이력, 최근 정비일 업데이트가 가능하게 로직을 구현했습니다. 그리고 해당 요트의 맴버와 일정을 공유할 수 있게 참조인 기능을 추가했습니다."
+        },
+        {
+          "title": "후기 스크린",
+          "img": "/img/hooaah/review.png",
+          "content": "일정 등록, 수정 시 완료 여부를 완료로 설정한다면 일정에 대한 후기를 남길 수 있고, 나중에 하기 버튼 클릭 시 null값이 자동으로 넘어가게 됩니다."
+        },
+        {
+          "title": "일정 세부 스크린",
+          "img": "/img/hooaah/calendar_detail.png",
+          "content": "일정의 세부 사항들을 확인할 수 있으며, 진행 전인 일정이라면 리뷰가 뜨지 않고, 진행 완료 일정이라면 리뷰가 뜨게 구현했습니다."
+        },
+        {
+          "title": "AI 채팅 스크린",
+          "img": "/img/hooaah/AI.png",
+          "content": "AI를 통해 요트에 대한 정보를 어플 내에서 쉽게 얻을 수 있도록 대화형으로 구현하였습니다."
+        },
+        {
+          "title": "알림 스크린",
+          "img": "/img/hooaah/notification.png",
+          "content": "부품의 예상 정비일이 1주일 이내로 남았거나 지났을 경우 알림 스크린으로 쉽게 확인할 수 있으며, FCM을 통해 매일 9시에 자동으로 일정 업데이트를 하여 업데이트된 사항이 있다면 알림을 푸시합니다. 포그라운드/백그라운드/앱이 완전 종료가 되었을 때도 알림이 푸시될 수 있도록 구현하였습니다."
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "subtitle": "👥 팀 프로젝트",
+    "thumbnail": "/img/pythonqt/main.png",
+    "title": "영화 예매 키오스크",
+    "date": "2025. 03. 26 ~ 2025. 03. 31",
+    "tags": ["Python", "PyQT5", "Oracle", "Matplotlib"],
+    "link": "https://github.com/2sseong/mini_project_2025-03",
+    "linkType": "external",
+    "dialog": {
+      "platform": "desktop",
+      "title": "영화 예매 키오스크",
+      "date": "2025. 03. 26 ~ 2025. 03. 31",
+      "tech": "Python, PyQT5, Oracle, Matplotlib",
+      "part": "UI 설계 및 영화 예매 기능 구현: Figma를 활용한 UI 설계, 인원 선택 및 좌석 선택 페이지 개발",
+      "description": "PyQT5 기반 GUI 프로그램으로, 실제 영화관에서 사용할 수 있는 영화 예매 키오스크를 주제로 한 팀 프로젝트입니다.",
+      "video": null,
+      "detail": [
+        {
+          "title": "메인 페이지",
+          "img": "/img/pythonqt/main.png",
+          "content": "프로그램 시작 화면으로, 영화 예매를 시작할 수 있는 버튼이 있습니다."
+        },
+        {
+          "title": "영화 선택 페이지",
+          "img": "/img/pythonqt/booking.png",
+          "content": "최신 영화 3편과 각 영화에 맞는 상영관 및 시간을 확인하고 선택할 수 있는 페이지입니다."
+        },
+        {
+          "title": "인원 선택 페이지",
+          "img": "/img/pythonqt/seat.png",
+          "content": "선택한 영화와 상영 시간에 맞춰 성인/청소년 인원을 선택하며, 숫자 버튼은 1명씩만 선택 가능하도록 구현했습니다."
+        },
+        {
+          "title": "좌석 선택 페이지",
+          "img": "/img/pythonqt/seat2.png",
+          "content": "예매 현황을 반영하여 이미 예약된 좌석은 선택 불가하며, 3명 선택 시 좌석이 연속으로 나오지 않으면 선택할 수 없도록 로직을 적용했습니다."
+        },
+        {
+          "title": "결제 페이지",
+          "img": "/img/pythonqt/pay.png",
+          "content": "총 금액을 계산하고 결제 정보를 입력하는 페이지입니다. 실제 결제 시스템 대신 입력 필드로 가격을 처리했습니다."
+        },
+        {
+          "title": "예매 완료 페이지",
+          "img": "/img/pythonqt/clear.png",
+          "content": "결제 후 모든 예약 정보를 확인할 수 있는 완료 페이지입니다."
+        },
+        {
+          "title": "관리자 페이지",
+          "img": "/img/pythonqt/admin.png",
+          "content": "총 매출과 상영 중인 영화별 예매 현황을 실시간으로 확인할 수 있는 관리자 페이지입니다."
+        }
+      ]
+    }
+  }
+]
