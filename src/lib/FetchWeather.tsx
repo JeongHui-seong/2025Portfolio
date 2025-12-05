@@ -8,7 +8,7 @@ export default function FetchWeather() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
   useEffect(()=>{
     const fetchData = async () => {
-      const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${CITY}`);
+      const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${CITY}`);
 
       if (!res.ok) {
         console.log(res);
