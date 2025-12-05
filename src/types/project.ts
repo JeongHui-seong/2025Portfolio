@@ -11,7 +11,7 @@ export interface ProjectDialog {
   tech: string;
   part: string;
   description: string;
-  video: string;
+  video: string | null;
   detail: ProjectDetailItem[];
 }
 

@@ -7,15 +7,14 @@ export default function FeedbackForm() {
   const [nickname, setNickname] = useState("");
   const [comments, setComments] = useState("");
   const [openSelectIcon, setOpenSelectIcon] = useState(false);
-  const iconboxRef = useRef(null);
+  const iconboxRef = useRef<HTMLDivElement>(null);
   const selectedData = animals.find(animal => animal.id === selectedAnimal);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
         iconboxRef.current &&
-        (iconboxRef.current as HTMLElement).contains &&
-        !(iconboxRef.current as HTMLElement).contains(event.target as Node)
+        !iconboxRef.current.contains(event.target as Node)
       ) {
         setOpenSelectIcon(false);
       }

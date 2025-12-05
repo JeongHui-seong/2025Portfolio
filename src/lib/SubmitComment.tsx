@@ -21,7 +21,7 @@ export default function SubmitComment({nickname, comments, icon, onSuccess}:comm
         return;
       }
 
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('comments')
         .insert([
           {nickname, comments, icon}
