@@ -124,15 +124,15 @@ body{
   margin: 0 auto;
   margin-top: var(--px-240);
   max-width: 840px;
-  transition: all 0.3s;
-  opacity: 0;
-  transform: translateY(40px);
 }
 
 .projects-box .title{
   font-size: var(--font-size-56);
   font-family: 'Bold';
-  text-align: center
+  text-align: center;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
 .projects-box .project-list{
@@ -153,6 +153,9 @@ body{
   overflow: hidden;
   background-color: var(--bg-color);
   position: relative;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
 .card-box .card-wrapper{
@@ -248,6 +251,7 @@ body{
   gap: var(--px-20);
   font-family: 'Bold';
   color: var(--primary-color);
+  font-size: var(--font-size-16);
 }
 
 .card-box .footer-wrapper button{
@@ -358,8 +362,12 @@ body{
   justify-content: center;
 }
 
-.dialog-wrapper .video-box video{
+.dialog-wrapper .mobile-videobox video{
   max-width: 300px;
+}
+
+.dialog-wrapper .desktop-videobox video{
+  width: 100%;
 }
 
 .dialog-wrapper .detail-box{
@@ -619,8 +627,8 @@ body{
 }
 
 .fadein{
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 @media screen and (max-width: 886px) {

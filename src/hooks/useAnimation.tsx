@@ -12,7 +12,7 @@ export default function useAnimation(){
                     observer.unobserve(entry.target); // 애니메이션 한 번만 실행
                 }
             },
-            {threshold: 0.3}
+            {threshold: 0.15}
         );
 
         if (ref.current) observer.observe(ref.current);

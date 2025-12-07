@@ -15,7 +15,7 @@ export default function Dialog({open, onClose, data}: DialogProps) {
 
   return createPortal(
     <div className="dialog-box" onClick={onClose}>
-      <div className={`dialog-wrapper ${isVisible ? "fadein" : null}`} ref={ref} onClick={e => e.stopPropagation()}>
+      <div className={`dialog-wrapper ${isVisible ? "fadein" : ""}`} ref={ref} onClick={e => e.stopPropagation()}>
         <div className="header-box">
           <div className="header-wrapper">
             <p>{data.title}</p>
@@ -47,7 +47,7 @@ export default function Dialog({open, onClose, data}: DialogProps) {
             {data.video !== null ? 
               (<div className="video-wrapper">
                 <h2 className="title">시연 영상</h2>
-                <div className="video-box">
+                <div className={`video-box ${data.platform === "mobile" ? "mobile-videobox" : "desktop-videobox"}`}>
                   <video src={data.video} muted autoPlay></video>
                 </div>
               </div>

@@ -25,6 +25,7 @@ export interface ProjectData {
   link?: string;
   linkType?: string;
   dialog: ProjectDialog;
+  page?: string;
 }
 
 export interface ProjectCardProps {
