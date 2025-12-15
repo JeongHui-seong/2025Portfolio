@@ -2,6 +2,8 @@ import { X } from "lucide-react";
 import { createPortal } from "react-dom";
 import { type ProjectDialog } from '../types/project'
 import useAnimation from "../hooks/useAnimation";
+import Skeleton from "react-loading-skeleton";
+import { useState } from "react";
 
 interface DialogProps {
   open: boolean;
@@ -12,6 +14,7 @@ interface DialogProps {
 export default function Dialog({open, onClose, data}: DialogProps) {
   if(!open) return null;
   const { ref, isVisible } = useAnimation();
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return createPortal(
     <div className="dialog-box" onClick={onClose}>
@@ -48,7 +51,8 @@ export default function Dialog({open, onClose, data}: DialogProps) {
               (<div className="video-wrapper">
                 <h2 className="title">시연 영상</h2>
                 <div className={`video-box ${data.platform === "mobile" ? "mobile-videobox" : "desktop-videobox"}`}>
-                  <video src={data.video} muted autoPlay></video>
+                  {!videoLoaded && <Skeleton height={200}/>}
+                  <video onLoadedData={() => setVideoLoaded(true)} src={data.video} muted autoPlay></video>
                 </div>
               </div>
             ) : null}
