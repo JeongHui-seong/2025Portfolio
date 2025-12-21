@@ -391,16 +391,16 @@
     "thumbnail": "/img/werp/werp_thumbnail.png",
     "title": "업무 관리 시스템 구축",
     "date": "2025. 11. 25 ~ ing",
-    "tags": ["React", "Vite", "Electron", "Typescript", "TailwindCss", "Zustand", "Nodejs Express", "Prisma"],
+    "tags": ["React", "Vite", "Electron", "Typescript", "TailwindCss", "Zustand", "Nodejs Express", "Prisma", "Tanstack Query", "Tanstack Table"],
     "link": "https://github.com/JeongHui-seong/werp",
     "linkType": "external",
     "dialog": {
       "platform": "desktop",
       "title": "업무 관리 시스템 구축",
       "date": "2025. 11. 25 ~ ing",
-      "tech": "React, Vite, Electron, Typescript, TailwindCss, Zustand, Nodejs Express, Prisma",
+      "tech": "React, Vite, Electron, Typescript, TailwindCss, Zustand, Nodejs Express, Prisma, Tanstack Query, Tanstack Table",
       "part": "풀스택 개발 진행 중",
-      "description": "사내 ERP / 업무관리 시스템 개발 진행 중, 매일매일 작업해서 업데이트할 예정입니다.",
+      "description": "사내 ERP / 업무관리 시스템 개발 진행 중, 매일매일 작업하여 기능이 완성된 부분을 업데이트할 예정입니다. 깃허브에서 어떤 작업이 진행 중인지 확인 가능합니다.",
       "video": null,
       "detail": [
         {
@@ -422,6 +422,26 @@
           "title": "코드 이메일",
           "img": "/img/werp/email_code.png",
           "content": "이메일 인증이 완료되면 해당 이메일로 발송된 코드를 확인할 수 있습니다."
+        },
+        {
+          "title": "출퇴근 근태 현황",
+          "img": "/img/werp/attendance_before.png",
+          "content": "계정에 등록된 출퇴근 데이터의 연,월 정보를 중복 제거하여 서버에서 조회하고 이를 Select Box로 제공하였습니다. 초기 진입 시 가장 최근의 연,월을 URL Search Params에 자동 반영하여 페이지 새로고침이나 공유 시에도 동일한 상태가 유지되도록 설계하였으며, 선택된 연,월에 해당하는 출퇴근 데이터를 TanStack Query를 통해 비동기 로딩 및 캐싱하여 불필요한 네트워크 요청을 간소화하였습니다. 조회한 데이터는 TanStack Table을 활용해 테이블 형태로 구성하였고, 테이블 헤더 클릭 시 컬럼 기준 정렬이 가능하도록 구현하였습니다."
+        },
+        {
+          "title": "출근하기",
+          "img": "/img/werp/attendance_ing.png",
+          "content": "상단바에 있는 출근하기 버튼 클릭 시 출근 여부를 묻는 Dialog가 뜨도록 하였으며, 출근하기 버튼 클릭 시 출근 등록이 됩니다."
+        },
+        {
+          "title": "출퇴근 근태 현황(출근 후)",
+          "img": "/img/werp/attendance_clockin.png",
+          "content": "출근 등록이 완료되면 Toast Message로 출근했다는 문구를 확인할 수 있으며, 캐싱을 무효화시켜 해당 연,월의 데이터가 업데이트되게 구현하였습니다."
+        },
+        {
+          "title": "출퇴근 근태 현황(퇴근 후)",
+          "img": "/img/werp/attendance_clockout.png",
+          "content": "퇴근 등록이 완료되면 Toast Message로 퇴근했다는 문구를 확인할 수 있으며, 캐싱을 무효화시켜 해당 연,월의 데이터가 업데이트되게 구현하였습니다. 퇴근 등록 시 총 근무시간, 평균 근무시간이 자동으로 변화하는 것을 확인할 수 있습니다."
         }
       ]
     }
