@@ -1,59 +1,86 @@
 import { useEffect, useState } from "react";
 import type { WeatherData } from "../types/weather";
+import type { location } from "../types/location";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-const CITY = import.meta.env.VITE_WEATHER_CITY;
 
 export default function FetchWeather() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
+  const [location, setLocation] = useState<location | null>(null)
+
   useEffect(()=>{
-    const fetchData = async () => {
-      const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${CITY}`);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log(position.coords.latitude, position.coords.longitude);
+        setLocation({lat : position?.coords.latitude, lng : position.coords.longitude});
+      },
+      (error) => {console.error(error); return;},
+      { enableHighAccuracy: true }
+    );
+  },[]);
+
+  useEffect(() => {
+    if (!location) return;
+
+    const fetchWeatherData = async() => {
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${location?.lat}&lon=${location?.lng}&appid=${API_KEY}&units=metric`);
 
       if (!res.ok) {
         console.log(res);
         return;
       }
-
+    
       const data = await res.json();
-      // console.log(data);
+      console.log(data);
 
-      let weatherText = "";
-      let weatherIcon = "";
-      const precip = data.current.precip_mm;
-      const isDay = data.current.is_day;
-      const condition = data.current.condition.text.toLowerCase();
+      const getWeatherEmoji = (icon: string) => {
+        switch (icon) {
+          case "01d":
+            return "☀️";
+          case "01n":
+            return "🌙";
 
-      if (precip === 0 && isDay === 1) {
-        weatherText = "맑은 낮";
-        weatherIcon = "🌞";
-      }
-      else if (precip === 0 && isDay === 0) {
-        weatherText = "맑은 밤";
-        weatherIcon = "🌙";
-      }
-      else if (precip > 0 && precip <= 0.2) {
-        weatherText = "흐림";
-        weatherIcon = "☁️";
-      }
-      else if (precip > 0.2 && condition.includes("snow")) {
-        weatherText = "눈";
-        weatherIcon = "❄️";
-      }
-      else {
-        weatherText = "비"
-        weatherIcon = "🌧";
-      }
+          case "02d":
+          case "02n":
+            return "🌤️";
+
+          case "03d":
+          case "03n":
+          case "04d":
+          case "04n":
+            return "☁️";
+
+          case "09d":
+          case "09n":
+          case "10d":
+          case "10n":
+            return "🌧️";
+
+          case "11d":
+          case "11n":
+            return "⛈️";
+
+          case "13d":
+          case "13n":
+            return "❄️";
+
+          case "50d":
+          case "50n":
+            return "🌫️";
+
+          default:
+            return "❓";
+        }
+      };
 
       setWeather({
-        weather: weatherText,
-        weatherIcon,
-        temperature : data.current.temp_c,
+        weather: data.weather[0].description,
+        weatherIcon: getWeatherEmoji(data.weather[0].icon),
+        temperature: data.main.temp
       })
-    };
+    }
+    fetchWeatherData();
+  },[location]);
 
-    fetchData();
-
-  }, [])
   return weather;
 }
